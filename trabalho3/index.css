@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  overflow-y: auto;
+}
+
+
+.bg-img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px);
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 150, 255, 0.3), rgba(255, 120, 160, 0.4));
+  z-index: -1;
+}
+
+
+.container {
+  background-color: rgba(255, 255, 255, 0.97);
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 35px 45px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  max-height: 85vh; /* limite de altura da caixa */
+}
+
+
+h1 {
+  color: #0077cc;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #0099aa;
+  margin: 25px 0 10px 0;
+  border-left: 5px solid #00cc88;
+  padding-left: 10px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+label {
+  font-weight: 600;
+  font-size: 0.95em;
+  color: #444;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1em;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #00aaff;
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.3);
+}
+
+/* BOTÃO */
+.btn {
+  background: linear-gradient(135deg, #00aaff, #00cc99);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto 0 auto;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
+}
+
+/* MENSAGEM DE SUCESSO */
+.sucesso {
+  text-align: center;
+  color: #00aa66;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 95%;
+    padding: 25px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
